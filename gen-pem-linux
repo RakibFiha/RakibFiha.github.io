@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 
 ## This script may be run on sapphire to generate pem files to AWS
 ## You can give a hostname and it will generate a pem file for you
