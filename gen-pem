@@ -1,10 +1,6 @@
 #!/usr/local/bin/bash
 
-## This script may be run on sapphire to generate pem files to AWS
-## You can give a hostname and it will generate a pem file for you
-## After that it will create a instance and route53
-
-## AWS configurations are saved locally on sapphire ubuntu or macos
+## Gen-pem can be run anywhere depending on your needs
 
 arg=$1
 shift
