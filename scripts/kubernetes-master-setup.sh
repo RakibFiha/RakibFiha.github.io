@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-# https://opensource.com/article/20/6/kubernetes-raspberry-pi
+# This script installs docker and kubernetes
+set -e
+
+# apt update & apt upgrade
+sudo apt-get update
+timeout 300s "sudo apt-get upgrade -y"
+timeout 300s "sudo apt-get update –fix-missing -y"
 
 # Install the docker.io package
 sudo apt install -y docker.io
@@ -21,7 +27,6 @@ EOF
 sudo mv ~/daemon.json /etc/docker/daemon.json
 
 # swapoff
-
 sudo swapoff -a  
 
 # Enable net.bridge.bridge-nf-call-iptables and -iptables6
