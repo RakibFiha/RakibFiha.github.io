@@ -27,6 +27,7 @@ EOF
 sudo mv ~/daemon.json /etc/docker/daemon.json
 
 # swapoff
+sudo sed -i 's/vm.swappiness=100/vm.swappiness=1/g' /etc/sysctl.conf
 sudo swapoff -a  
 
 # Enable net.bridge.bridge-nf-call-iptables and -iptables6
