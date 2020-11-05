@@ -3,11 +3,6 @@
 # This script installs docker and kubernetes
 set -e
 
-# apt update & apt upgrade
-sudo apt-get update
-timeout 300s "sudo apt-get upgrade -y"
-timeout 300s "sudo apt-get update –fix-missing -y"
-
 # Install the docker.io package
 sudo apt install -y docker.io
 
